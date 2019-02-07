@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Nilai || Predikat</title>
+        <style>
+            body{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background: linear-gradient(to right, white, grey, black)
+            }
+            .thetwo{
+                border: 5px;
+                border-radius: 90px;
+                border-style: solid ;
+                color: black;
+                border-color: greenyellow;
+                width: 50%;
+                text-align: center;
+                margin-left: 25%;
+                margin-right: 25%;
+                
+            }
+        </style>
+    </head>
+    <script language="Javascript">
+        function test(){
+            var a=document.kirim.T1.value
+                if (a >= 93 && a<=100) {
+                    document.kirim.T2.value="A"
+                }else if (a < 93 && a>82){
+                    document.kirim.T2.value="B"
+                }else if(a<=82 && a>74){
+                    document.kirim.T2.value="C"
+                }else if(a<=74 && a>49){
+                    document.kirim.T2.value="D"
+                }else if(a<=49 && a>=0){
+                    document.kirim.T2.value="E"
+                }else if(a>=101){
+                    document.kirim.T2.value="Impossible"
+                }else if(a<=0){
+                    document.kirim.T2.value="Dibawah Nol"
+                }
+
+        }
+    </script>
+    <body>
+        <h1 align="center">Nilai & Predikat</h1>
+        <hr style="height: 15px;background-color: green">
+        <div class="theone"></div>
+            <form class="thetwo"action="Post" name="kirim">
+                <p align="center">Bilangan <input type="text" name="T1" size="20"><br></p>
+                <p align="center"><input type="button" value="Konversi Ke Predikat" name="T" onclick=test()></p>
+                <p align="center">Predikat <input type="text" name="T2" size="20"></p>
+            </form>
+        </div>
+    </body>
+</html>

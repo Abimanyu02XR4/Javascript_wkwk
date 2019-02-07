@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Kalkulator Sederhana</title>
+        <style>
+            .border{
+                width: 50%;
+                margin-left: 25%;
+                margin-right: 25%;
+                text-align: center;
+                margin-top: 10%;
+                border-style: solid;
+                border-width: 2px;
+                border-radius: 0px;
+            }
+            body{
+                background: linear-gradient(to right, black, grey, white)
+            }
+        </style>
+    </head>
+    <script language="Javascript">
+        function tambah(){
+            var a=document.tulis.R1.value
+            var b=document.tulis.R2.value
+            document.tulis.Hasil.value=parseInt(a)+parseInt(b)
+        }
+        function kali(){
+            var a=document.tulis.R1.value
+            var b=document.tulis.R2.value
+            document.tulis.Hasil.value=parseInt(a)*parseInt(b)
+        }
+        function bagi(){
+            var a=document.tulis.R1.value
+            var b=document.tulis.R2.value
+            document.tulis.Hasil.value=parseInt(a)/parseInt(b)
+        }
+        function kurang(){
+            var a=document.tulis.R1.value
+            var b=document.tulis.R2.value
+            document.tulis.Hasil.value=parseInt(a)-parseInt(b)
+        }
+        function modulus(){
+            var a=document.tulis.R1.value
+            var b=document.tulis.R2.value
+            document.tulis.Hasil.value=parseInt(a)%parseInt(b)
+        }
+        
+    </script>
+    <body>
+        <h1 align="center">Kalkulator</h1>
+        <hr style="height:15px;background-color: red;width: 50%;text-align: center">
+        <div class="calc">
+            <form class="border" action="POST" name="tulis">
+                <p>Bilangan Pertama     : <input type="text" name="R1" size="15"><br></p>
+                <p>Bilangan Kedua       : <input type="text" name="R2" size="15"><br></p>
+                <p>Hasil       : <input type="text" name="Hasil" size="15"><br></p>
+                <p><input type="button" name="*" value="X" onclick=kali()>
+                <input type="button" name="/" value="/" onclick=bagi()>
+                <input type="button" name="+" value="+" onclick=tambah()>
+                <input type="button" name="-" value="-" onclick=kurang()>
+                <input type="button" name="%" value="%" onclick=modulus()>
+                <input type="reset" name="reset" value="Reset All" onclick=reset()></p>
+            </form>
+        </div>
+    </body>
+</html>
